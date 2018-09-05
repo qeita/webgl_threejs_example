@@ -70,24 +70,11 @@
         for(let i = 0; i < intersects.length; i++){
           if(intersects[i].object.name === 'cube'){
             console.log('click')
-            TweenMax.to( this.cube, 2, {
-              three: {
-                x: 3,
-                opacity: 0.4,
-                rotationX: 60,
-              },
-              onComplete: () => {
-                setTimeout( () => {
-                  TweenMax.to( this.cube, 0.5, {
-                    three: {
-                      x: 0,
-                      opacity: 0.6,
-                      rotationX: 90,
-                    },
-                  })      
-
-                }, 2000)
-              }
+            AnimManager.to(this.cube, 0.8, {
+              x: 8,
+              y: 5,
+              z: 2,
+              scaleX: 3
             })
             break
           }
